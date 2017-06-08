@@ -1,15 +1,14 @@
 package main.java;
 
 
-import main.java.CodeChef.AprilChallenge.SimilarDishes;
-import main.java.CodeChef.Beginner.SmallFactorial2;
-import main.java.CodeChef.Beginner.SmallFactorials;
-import main.java.CodeChef.Beginner.TurboSort;
+import main.java.CodeChef.Beginner.AddingTwoNumbers;
+import main.java.CodeChef.Beginner.PackagingCupcakes;
+import main.java.CodeChef.Beginner.SumsInTriangle;
 
 public class MainRunnerClass {
 
   public static void main(String[] args) {
-    TurboSort.run();
+    SumsInTriangle.run();
 
   }
 }
