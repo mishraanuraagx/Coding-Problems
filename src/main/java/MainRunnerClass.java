@@ -2,13 +2,14 @@ package main.java;
 
 
 import main.java.CodeChef.Beginner.AddingTwoNumbers;
+import main.java.CodeChef.Beginner.CielAndReceipt;
 import main.java.CodeChef.Beginner.PackagingCupcakes;
 import main.java.CodeChef.Beginner.SumsInTriangle;
 
 public class MainRunnerClass {
 
   public static void main(String[] args) {
-    SumsInTriangle.run();
+    CielAndReceipt.run();
 
   }
 }
