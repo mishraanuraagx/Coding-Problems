@@ -5,11 +5,13 @@ import main.java.CodeChef.Beginner.AddingTwoNumbers;
 import main.java.CodeChef.Beginner.CielAndReceipt;
 import main.java.CodeChef.Beginner.PackagingCupcakes;
 import main.java.CodeChef.Beginner.SumsInTriangle;
+import main.java.CodeChef.JuneChallenge.AGoodSet;
+import main.java.CodeChef.JuneChallenge.XennyAndCoinRankings;
 
 public class MainRunnerClass {
 
   public static void main(String[] args) {
-    CielAndReceipt.run();
+    XennyAndCoinRankings.run();
 
   }
 }
