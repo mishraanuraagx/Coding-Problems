@@ -7,11 +7,12 @@ import main.java.CodeChef.Beginner.PackagingCupcakes;
 import main.java.CodeChef.Beginner.SumsInTriangle;
 import main.java.CodeChef.JuneChallenge.AGoodSet;
 import main.java.CodeChef.JuneChallenge.XennyAndCoinRankings;
+import main.java.CodeChef.VideoGame;
 
 public class MainRunnerClass {
 
   public static void main(String[] args) {
-    XennyAndCoinRankings.run();
+    VideoGame.run();
 
   }
 }
