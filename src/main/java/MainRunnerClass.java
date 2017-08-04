@@ -1,6 +1,7 @@
 package main.java;
 
 
+import main.java.CodeChef.August.ChefandRainbowArray;
 import main.java.CodeChef.Beginner.AddingTwoNumbers;
 import main.java.CodeChef.Beginner.CielAndReceipt;
 import main.java.CodeChef.Beginner.PackagingCupcakes;
@@ -12,7 +13,7 @@ import main.java.CodeChef.VideoGame;
 public class MainRunnerClass {
 
   public static void main(String[] args) {
-    VideoGame.run();
+    ChefandRainbowArray.run();
 
   }
 }
