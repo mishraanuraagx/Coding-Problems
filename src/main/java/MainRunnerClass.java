@@ -13,7 +13,7 @@ import main.java.CodeChef.VideoGame;
 public class MainRunnerClass {
 
   public static void main(String[] args) {
-    ChefandRainbowArray.run();
+
 
   }
 }
