@@ -5,14 +5,19 @@ import main.java.CodeChef.Beginner.AddingTwoNumbers;
 import main.java.CodeChef.Beginner.CielAndReceipt;
 import main.java.CodeChef.Beginner.PackagingCupcakes;
 import main.java.CodeChef.Beginner.SumsInTriangle;
+import main.java.CodeChef.JulyChallenge.ChefandSignSequences;
+import main.java.CodeChef.JulyChallenge.HarryAndMagicalNumber;
+import main.java.CodeChef.JulyChallenge.TheRiddler;
+import main.java.CodeChef.JulyChallenge.WhatsintheName;
 import main.java.CodeChef.JuneChallenge.AGoodSet;
+import main.java.CodeChef.JuneChallenge.ChefAndTheFeast;
 import main.java.CodeChef.JuneChallenge.XennyAndCoinRankings;
+import main.java.CodeChef.others.SmartPhone;
 
 public class MainRunnerClass {
 
   public static void main(String[] args) {
-    XennyAndCoinRankings.run();
-
+    SmartPhone.run();
   }
 }
 
