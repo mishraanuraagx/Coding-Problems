@@ -2,19 +2,12 @@ package main.java;
 
 
 import main.java.CodeChef.August.ChefandRainbowArray;
-import main.java.CodeChef.Beginner.AddingTwoNumbers;
-import main.java.CodeChef.Beginner.CielAndReceipt;
-import main.java.CodeChef.Beginner.PackagingCupcakes;
-import main.java.CodeChef.Beginner.SumsInTriangle;
-import main.java.CodeChef.JuneChallenge.AGoodSet;
-import main.java.CodeChef.JuneChallenge.XennyAndCoinRankings;
-import main.java.CodeChef.VideoGame;
+import main.java.CodeChef.JulyChallenge.ChefandSignSequences;
 
 public class MainRunnerClass {
 
   public static void main(String[] args) {
-
-
+    ChefandRainbowArray.run();
   }
 }
 

@@ -1,93 +1,53 @@
 package main.java.CodeChef.JulyChallenge;
 
+/**
+ * Chef found a strange string yesterday - a string of signs s, where each sign is either a '<', '=' or a '>'. Let N be the length of this string. Chef wants to insert N + 1 positive integers into this sequence and make it valid. A valid sequence is a sequence where every sign is preceded and followed by an integer, and the signs are correct. That is, if a sign '<' is preceded by the integer a and followed by an integer b, then a should be less than b. Likewise for the other two signs as well.
 
+ Chef can take some positive integers in the range [1, P] and use a number in the range as many times as he wants.
+
+ Help Chef find the minimum possible P with which he can create a valid sequence.
+ */
+
+//TODO max: not submitted yet
 import java.util.Scanner;
 
 public class ChefandSignSequences {
-  public static void run() {
-    Scanner sc = new Scanner(System.in);
-    int t = sc.nextInt();
-    sc.nextLine(); // to skip new line
-    while (t-- != 0) {
-      String line = sc.nextLine();
-      long min = 1;
-      long max = 1;
-      long value = 1;
+    public static void run() {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        sc.nextLine(); // to skip new line
+        while (t-- != 0) {
+            String line = sc.nextLine();
 
-      if (!line.contains(">") && !line.contains("<") && !line.contains("=")) {
-        System.out.println("0");
-        continue;
-      }
+            int countGreaterThan = 0;
+            int maxGreaterThan = 0;
+            int countLessThan = 0;
+            int maxLessThan = 0;
 
-      char[] c = line.toCharArray();
-      int n = c.length;
-
-      for (int i = 0; i < n; i++) {
-        if (c[i] == '<') {
-          value++;
-          if (i < n - 1) {
-            if (c[i + 1] == '>') {
-              if (value < max) {
-                value = max;
-              }
+            for (int i = 0; i < line.length(); i++) {
+                if (line.charAt(i) == '<') {
+                    countLessThan++;
+                    if (countGreaterThan > maxGreaterThan) {
+                        maxGreaterThan = countGreaterThan;
+                    }
+                    countGreaterThan = 0;
+                } else if (line.charAt(i) == '>') {
+                    countGreaterThan++;
+                    if (countLessThan > maxLessThan) {
+                        maxLessThan = countLessThan;
+                    }
+                    countLessThan = 0;
+                }
             }
-          }
-        } else if (c[i] == '>') {
-          value--;
-          if (i < n - 1) {
-            if (c[i + 1] == '<') {
-              if (value > min) {
-                value = min;
-              }
 
+            if (countGreaterThan > maxGreaterThan) {
+                maxGreaterThan = countGreaterThan;
             }
-          }
-        }
-
-        if (value > max) {
-          max = value;
-        }
-        if (value < min) {
-          min = value;
-        }
-
-      }
-      int longestLessThanSeq = 0;
-      int longestGreaterThanSeq = 0;
-      int seq = 0;
-      boolean isGreatherThan = c[0] == '>' ? true : false;
-      for (int i = 0; i < n;) {
-        while (isGreatherThan && i < n) {
-          seq++;
-          if (i < n - 1) {
-            if (c[i + 1] != '>') {
-              if (longestGreaterThanSeq < seq) {
-                longestGreaterThanSeq = seq;
-                seq = 0;
-                isGreatherThan = false;
-              }
+            if (countLessThan > maxLessThan) {
+                maxLessThan = countLessThan;
             }
-          }
-          i++;
-        }
-        while (!isGreatherThan && i < n) {
-          seq++;
-          if (i < n - 1) {
-            if (c[i + 1] == '>') {
-              if (longestLessThanSeq < seq) {
-                longestLessThanSeq = seq;
-                seq = 0;
-                isGreatherThan = true;
-              }
-            }
-          }
-          i++;
-        }
-      }
-      int s = Math.max(Math.max(longestGreaterThanSeq, longestLessThanSeq),seq) + 1;
-      System.out.println(max - min + 1);
-      System.out.println(s);
 
+            System.out.println(Math.max(maxGreaterThan, maxLessThan)+1);
+        }
     }
-  }
 }
