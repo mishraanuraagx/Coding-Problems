@@ -2,12 +2,13 @@ package main.java;
 
 
 import main.java.CodeChef.August.ChefandRainbowArray;
+import main.java.CodeChef.Beginner.FindtheMaximumValue;
 import main.java.CodeChef.JulyChallenge.ChefandSignSequences;
 
 public class MainRunnerClass {
 
   public static void main(String[] args) {
-    ChefandRainbowArray.run();
+    FindtheMaximumValue.run();
   }
 }
 
